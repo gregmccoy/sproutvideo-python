@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>video module &#8212; sproutvideo-python 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="sproutvideo-python 0.1 documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-video">
+<span id="video-module"></span><h1>video module<a class="headerlink" href="#module-video" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="video.Video">
+<em class="property">class </em><code class="descclassname">video.</code><code class="descname">Video</code><span class="sig-paren">(</span><em>client</em><span class="sig-paren">)</span><a class="headerlink" href="#video.Video" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="video.Video.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#video.Video.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes single video</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>self</strong> (<a class="reference internal" href="client.html#client.SproutClient" title="client.SproutClient"><em>SproutClient</em></a>) &#8211; SproutClient instance</li>
+<li><strong>id</strong> (<em>str</em>) &#8211; id of video to delete</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Response in JSON format</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="video.Video.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>id=''</em><span class="sig-paren">)</span><a class="headerlink" href="#video.Video.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls Gets videos or single video if an id is given</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>self</strong> (<a class="reference internal" href="client.html#client.SproutClient" title="client.SproutClient"><em>SproutClient</em></a>) &#8211; SproutClient instance</li>
+<li><strong>id</strong> (<em>str</em>) &#8211; id of video to grab</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Response in JSON format</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="video.Video.poster_frame">
+<code class="descname">poster_frame</code><span class="sig-paren">(</span><em>id</em>, <em>image</em><span class="sig-paren">)</span><a class="headerlink" href="#video.Video.poster_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uploads a images and sets a video to use it as a poster image</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>self</strong> (<a class="reference internal" href="client.html#client.SproutClient" title="client.SproutClient"><em>SproutClient</em></a>) &#8211; SproutClient instance</li>
+<li><strong>id</strong> (<em>str</em>) &#8211; id of video</li>
+<li><strong>image</strong> (<em>str</em>) &#8211; location of the image file</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Response in JSON format</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="video.Video.upload">
+<code class="descname">upload</code><span class="sig-paren">(</span><em>source</em>, <em>title=''</em>, <em>description=''</em>, <em>privacy=''</em>, <em>password=''</em>, <em>prefers_embed_password=''</em>, <em>tags=''</em>, <em>tag_names=''</em>, <em>notification_url=''</em>, <em>requires_signed_embeds=''</em>, <em>embedded_url=''</em>, <em>token=''</em><span class="sig-paren">)</span><a class="headerlink" href="#video.Video.upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uploads videos with the specified settings</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>self</strong> (<a class="reference internal" href="client.html#client.SproutClient" title="client.SproutClient"><em>SproutClient</em></a>) &#8211; SproutClient instance</li>
+<li><strong>title</strong> (<em>str</em>) &#8211; Title of video</li>
+<li><strong>description</strong> (<em>str</em>) &#8211; description of video</li>
+<li><strong>privacy</strong> (<em>str</em>) &#8211; level of video privacy 0-4</li>
+<li><strong>password</strong> (<em>str</em>) &#8211; Password for video</li>
+<li><strong>prefers_embed_password</strong> (<em>str</em>) &#8211; require password for video</li>
+<li><strong>tags</strong> (<em>str</em>) &#8211; tag id&#8217;s</li>
+<li><strong>tag_names</strong> (<em>str</em>) &#8211; create new tags with the given names</li>
+<li><strong>notification_url</strong> (<em>str</em>) &#8211; url for postback</li>
+<li><strong>requires_signed_embeds</strong> (<em>str</em>) &#8211; indicates if signed embed codes are required</li>
+<li><strong>embedded_url</strong> (<em>str</em>) &#8211; embed url</li>
+<li><strong>token</strong> (<em>str</em>) &#8211; token from upload token request</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/video.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Greg McCoy.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/video.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
